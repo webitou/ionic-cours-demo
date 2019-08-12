@@ -7,7 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --prod --base-href /ionic-pwa-demo/",
+    "build:prod": "ng build --prod --base-href /ionic-cours-demo/",
     "deploy": "npm run build:prod && npm run deploy:ghpage",
     "deploy:ci": "npm run build:prod && npm run deploy:ghpage:ci",
     "deploy:ghpage": "npx ngh --dir www --name=$GH_USER --email=$GH_MAIL --no-silent",
