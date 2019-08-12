@@ -1,0 +1,53 @@
+<ion-header>
+  <app-header title="Blog Item">
+      <ion-back-button slot="start"></ion-back-button>
+  </app-header>
+</ion-header><ion-content>
+  <ion-grid *ngIf="post$|async as post">
+    <ion-row>
+      <ion-col padding>
+        <ion-title color="primary">
+            <h1>{{post?.title}}</h1>
+            <p *ngIf="(user$|async) as user">
+              <i>
+                <small>
+                  Publié par:
+                  <a [routerLink]="'../../users/' + post?.userId">
+                    {{user?.name}}
+                  </a>
+                </small>
+              </i>
+            </p>
+        </ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col padding>
+        <ion-text>
+          {{post?.body}}
+        </ion-text>
+      </ion-col>
+      </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf="(comments$|async) as comments">
+    <ion-row>
+      <ion-col>
+        <ion-text>Commentaires:</ion-text>
+        <ion-list>
+          <ion-item *ngFor="let comment of comments">
+            <ion-label text-wrap>
+              <ion-text color="primary">
+                <h3>{{comment?.name}}</h3>
+              </ion-text> 
+              <ion-text>
+                <p><i>{{comment?.email}}</i></p>
+              </ion-text>
+              <p>{{comment?.body}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

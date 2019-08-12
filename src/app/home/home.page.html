@@ -1,0 +1,31 @@
+<ion-header>
+  <app-header title="Home Page">
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-button slot="end" data-url="blog">blog</ion-button>
+  </app-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        The world is your oyster.
+        <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    
+        <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-datetime (ionChange)="checkDate($event)" displayFormat="D MMM YYYY H:mm" value="2019-07-08T13:47:20.789"></ion-datetime>
+        </ion-item>
+      
+      <ion-button color="primary" (click)="presentModal()">display modal</ion-button>
+      <ion-button color="primary" [routerLink]="'../blog'">Go Blog Index Page</ion-button>
+      <ion-button color="primary" [routerLink]="'../blog/edit'">Go Edit Blog Page</ion-button>
+      <ion-button color="primary" [routerLink]="'../cam'">picture</ion-button>
+      <ion-button color="primary" [routerLink]="'../gyro'">Gyroscope</ion-button>
+      <ion-button color="primary" [routerLink]="'../notification'">Notification</ion-button>
+      <ion-button color="primary" [routerLink]="'../motion'">Motion</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

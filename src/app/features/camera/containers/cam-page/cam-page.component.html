@@ -1,0 +1,28 @@
+<ion-header>
+  <app-header title="Camera">
+      <ion-back-button slot="start"></ion-back-button>
+  </app-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+      <ion-row>
+        <ion-title>Camera</ion-title>
+      </ion-row>
+      <ion-row>
+        <ion-button color="primary" (click)="takePicture()">Picture</ion-button>
+      </ion-row>
+    <ion-row>
+   
+      <img *ngIf="photo" [src]="photo" >
+
+      <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+        <ion-fab-button (click)="takePicture()">
+          <ion-icon name="camera"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+   
+   
+    </ion-row>
+  </ion-grid>
+</ion-content>

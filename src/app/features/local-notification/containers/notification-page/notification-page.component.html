@@ -1,0 +1,67 @@
+<ion-header>
+  <app-header title="Notification">
+      <ion-back-button color="danger" slot="start"></ion-back-button>
+  </app-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+
+    <!-- <ion-row>
+     <ion-text>
+       <h1>Notification local</h1>
+     </ion-text>
+    </ion-row>
+    <ion-row>
+   
+      <ion-button color="primary" (click)="init()" ion-button>
+            Init
+      </ion-button>
+          
+      <ion-button color="primary" (click)="scheduleNow()" ion-button>
+            Schedule Now - Icon from config (or default)
+      </ion-button>
+          
+      <ion-button color="primary" (click)="scheduleNowWithIcon()" ion-button>
+            Schedule Now - Icon parameter
+      </ion-button>
+
+      <ion-button color="primary" (click)="scheduleOnce()" ion-button>
+            Schedule in 10 seconds
+      </ion-button>
+
+      <ion-button color="primary" (click)="scheduleRepeatingEvery()" ion-button>
+            Schedule every minute
+      </ion-button>
+
+      <ion-button color="primary" (click)="scheduleRepeatingOn()" ion-button>
+            Schedule when clock matches next minute 
+      </ion-button>
+
+      <ion-button color="primary" (click)="cancelNotification()" ion-button>
+            Cancel Local Notifications
+      </ion-button>
+
+      <ion-button color="primary" (click)="getPending()" ion-button>
+            Get Pending
+      </ion-button>
+
+      <div *ngIf="pendingNotifs">
+        <div *ngFor="let notif of pendingNotifs.notifications">
+            {{toJson(notif)}}
+        </div>
+      </div>
+    </ion-row> -->
+
+    <ion-row>
+      <ion-text>
+        <h1>Toast</h1>
+      </ion-text>
+    </ion-row>
+    <ion-row>
+          
+      <ion-button color="primary" (click)="displayToast()">Dislpay toast</ion-button>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

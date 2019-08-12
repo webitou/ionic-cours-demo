@@ -1,0 +1,15 @@
+<ion-header>
+    <app-header title="User">
+      <ion-back-button slot="start"></ion-back-button>
+    </app-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid *ngIf="(user$|async) as user">
+    <ion-row>
+      <ion-col>
+        <pre>{{user|json}}</pre>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
